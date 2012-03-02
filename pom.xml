@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.acampadas21</groupId>
+  <artifactId>pokemine</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Pokemine</name>
+  <description>Bringing Pokemon battles to minecraft</description>
+      <repositories>
+        <repository>
+            <id>spout-repo</id>
+            <url>http://repo.getspout.org</url>
+            <releases>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+      </repositories>
+      <dependencies>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>1.1-R6-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+      </dependencies>
+</project>
