@@ -2,7 +2,14 @@ package net.acampadas21.pokemine.types;
 
 public class TypeMultiplier {
 
-	public double getMultiplier(PokeType source, PokeType target1, PokeType target2) {
+	public static double getMultiplier(String source, String target1, String target2) {
+		if (target2 != null) {
+		return getMultiplier(PokeType.valueOf(source.toUpperCase()), PokeType.valueOf(target1.toUpperCase()), PokeType.valueOf(target2.toUpperCase()));
+		} else {
+		return getMultiplier(PokeType.valueOf(source.toUpperCase()), PokeType.valueOf(target1.toUpperCase()));
+		}
+	
+	public static double getMultiplier(PokeType source, PokeType target1, PokeType target2) {
 		double multiplier = 1;
 		multiplier = multiplier * getMultiplier(source, target1);
 		if (target2 != null) {
@@ -10,7 +17,7 @@ public class TypeMultiplier {
 		}
 		return multiplier;
 	}
-	public double getMultiplier(PokeType source, PokeType target) {
+	public static double getMultiplier(PokeType source, PokeType target) {
 		switch (source) {
 		case NORMAL:
 			if (target == PokeType.GHOST) {
